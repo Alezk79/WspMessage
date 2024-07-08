@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación a Desayunar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffe6e9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #e91e63;
+        }
+        p {
+            font-size: 18px;
+        }
+        .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        .image-grid img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .buttons {
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: #e91e63;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Hola, Sarah!</h1>
+        <p> Me encantaría invitarte a desayunar en este sitio, ¿quieres? ;)</p>
+        <div class="image-grid">
+            <a href="https://ibb.co/mNsPPrf"><img src="https://i.ibb.co/mNsPPrf/450431077-870975458207345-7078801633466465406-n.jpg" alt="450431077-870975458207345-7078801633466465406-n" border="0"></a><a href="https://ibb.co/fH61qrx"><img src="https://i.ibb.co/fH61qrx/450178709-3365556973744845-158627015507478670-n.jpg" alt="450178709-3365556973744845-158627015507478670-n" border="0"></a> <a href="https://ibb.co/F5jRXZS"><img src="https://i.ibb.co/F5jRXZS/450445274-7734992566621692-1482777405335737816-n-1.jpg" alt="450445274-7734992566621692-1482777405335737816-n-1" border="0"></a>  <a href="https://ibb.co/qpYL2TW"><img src="https://i.ibb.co/qpYL2TW/450089086-482650550923010-1896812398588806951-n.jpg" alt="450089086-482650550923010-1896812398588806951-n" border="0"></a>  
+        </div>
+        <div class="buttons">
+            <span class="button" onclick="mostrarRespuesta('si')">Sí quiero</span>
+            <span class="button" onclick="mostrarRespuesta('no')">No quiero</span>
+        </div>
+        <div id="respuesta-no" class="hidden">
+            <p>Ok,tabien</p>
+            <a href="https://imgbb.com/"><img src="https://i.ibb.co/8P7SgRb/6a821ab7-cba0-45c5-80e2-f1545e5b2211.webp" alt="Respuesta No" border="0"></a>
+        </div>
+        <div id="respuesta-si" class="hidden">
+            <p>ya está ya</p>
+            <a href="https://imgbb.com/"><img src="https://i.ibb.co/4RSKQLr/01bb901b-b6b0-46a4-abc0-359a7d502bbf.webp" alt="Respuesta Sí" border="0"></a>
+        </div>
+    </div>
+
+    <script>
+        function mostrarRespuesta(respuesta) {
+            document.getElementById('respuesta-si').classList.add('hidden');
+            document.getElementById('respuesta-no').classList.add('hidden');
+            if (respuesta === 'si') {
+                document.getElementById('respuesta-si').classList.remove('hidden');
+            } else {
+                document.getElementById('respuesta-no').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
