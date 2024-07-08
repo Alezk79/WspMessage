@@ -64,9 +64,9 @@
 </head>
 <body>
     <div class="container">
-        <h1>¡Hola, Sarah!</h1>
-        <p>Halo, Everynyan!! Me encantaría invitarte a desayunar en este sitio, ¿queres? ;)</p>
-        <div class="image-grid">
+        <h1>Halo, Everynyan!!</h1>
+        <p> Mi querida Sarah, me encantaría invitarte a desayunar en este sitio, ¿querés? ;)</p>
+        <div class="image-grid" id="initial-images">
             <a href="https://ibb.co/mNsPPrf"><img src="https://i.ibb.co/mNsPPrf/450431077-870975458207345-7078801633466465406-n.jpg" alt="450431077-870975458207345-7078801633466465406-n" border="0"></a>
             <a href="https://ibb.co/fH61qrx"><img src="https://i.ibb.co/fH61qrx/450178709-3365556973744845-158627015507478670-n.jpg" alt="450178709-3365556973744845-158627015507478670-n" border="0"></a>
             <a href="https://ibb.co/F5jRXZS"><img src="https://i.ibb.co/F5jRXZS/450445274-7734992566621692-1482777405335737816-n-1.jpg" alt="450445274-7734992566621692-1482777405335737816-n-1" border="0"></a>
@@ -78,11 +78,23 @@
         </div>
         <div id="respuesta-no" class="hidden">
             <p>Ok, ta bien</p>
-            <img class="response-image" src="https://i.ibb.co/8P7SgRb/6a821ab7-cba0-45c5-80e2-f1545e5b2211.webp" alt="Respuesta No" border="0">
+            <div class="image-grid">
+               <a href="https://ibb.co/P6rtF9n"><img src="https://i.ibb.co/CHwWmMZ/Whats-App-Image-2024-07-08-at-6-40-56-PM.jpg" alt="Whats-App-Image-2024-07-08-at-6-40-56-PM" border="0"></a>
+<a href="https://ibb.co/nLv92Gb"><img src="https://i.ibb.co/P6nKpLN/Whats-App-Image-2024-07-08-at-6-39-20-PM.jpg" alt="Whats-App-Image-2024-07-08-at-6-39-20-PM" border="0"></a>
+<a href="https://ibb.co/nfSTRH1"><img src="https://i.ibb.co/k0FpMRD/Whats-App-Image-2024-07-08-at-6-37-03-PM.jpg" alt="Whats-App-Image-2024-07-08-at-6-37-03-PM" border="0"></a>
+<a href="https://ibb.co/tZkkGVp"><img src="https://i.ibb.co/hXhh63F/Whats-App-Image-2024-07-08-at-6-36-14-PM.jpg" alt="Whats-App-Image-2024-07-08-at-6-36-14-PM" border="0"></a>
+<a href="https://ibb.co/ZYT51wQ"><img src="https://i.ibb.co/yYstBMz/Whats-App-Image-2024-07-08-at-6-34-59-PM.jpg" alt="Whats-App-Image-2024-07-08-at-6-34-59-PM" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/5hFf61F/309118355-407483828203362-2128938121300367796-n.png" alt="309118355-407483828203362-2128938121300367796-n" border="0"></a>
+<a href="https://imgbb.com/"><img src="https://i.ibb.co/8P7SgRb/6a821ab7-cba0-45c5-80e2-f1545e5b2211.webp" alt="6a821ab7-cba0-45c5-80e2-f1545e5b2211" border="0"></a>
+<a href="https://ibb.co/31zLYZR"><img src="https://i.ibb.co/G7Tb3SH/Whats-App-Image-2024-07-08-at-6-40-24-PM.jpg" alt="Whats-App-Image-2024-07-08-at-6-40-24-PM" border="0"></a>
+            </div>
         </div>
         <div id="respuesta-si" class="hidden">
-            <p>Esoo </p>
+            <p>Esoo ❤️</p>
             <a href="https://imgbb.com/"><img src="https://i.ibb.co/0QWhbgx/01bb901b-b6b0-46a4-abc0-359a7d502bbf.jpg" alt="01bb901b-b6b0-46a4-abc0-359a7d502bbf" border="0"></a>
+			<a href="https://imgbb.com/"><img class="response-image" src="https://i.ibb.co/WDTpV37/d4ce74c3-3a0c-4ca3-b337-829877eed291.webp" alt="d4ce74c3-3a0c-4ca3-b337-829877eed291" border="0"></a>
+<a href="https://ibb.co/gv9RJcW"><img class="response-image" src="https://i.ibb.co/DGWRQjM/Whats-App-Image-2024-07-08-at-6-45-09-PM.jpg" alt="Whats-App-Image-2024-07-08-at-6-45-09-PM" border="0"></a>
+<a href="https://ibb.co/5BsqL92"><img class="response-image"  src="https://i.ibb.co/GcCgRJF/Whats-App-Image-2024-07-08-at-6-43-56-PM.jpg" alt="Whats-App-Image-2024-07-08-at-6-43-56-PM" border="0"></a>
         </div>
     </div>
 
@@ -90,10 +102,12 @@
         function mostrarRespuesta(respuesta) {
             document.getElementById('respuesta-si').classList.add('hidden');
             document.getElementById('respuesta-no').classList.add('hidden');
+            document.getElementById('initial-images').classList.remove('hidden');
             if (respuesta === 'si') {
                 document.getElementById('respuesta-si').classList.remove('hidden');
             } else {
                 document.getElementById('respuesta-no').classList.remove('hidden');
+                document.getElementById('initial-images').classList.add('hidden');
             }
         }
     </script>
